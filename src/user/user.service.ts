@@ -67,10 +67,10 @@ export class UserService {
 		return {
 			user: rest,
 			statistics: [
-				{ label: 'Total', value: totalTasks },
-				{ label: 'Completed tasks', value: completedTasks },
-				{ label: 'Today tasks', value: todayTasks },
-				{ label: 'Week tasks', value: weekTasks }
+				{ label: 'Всего задач', value: totalTasks },
+				{ label: 'Выполнено задач', value: completedTasks },
+				{ label: 'Задачи на сегодня', value: todayTasks },
+				{ label: 'Задачи на неделю', value: weekTasks }
 			]
 		}
 	}
