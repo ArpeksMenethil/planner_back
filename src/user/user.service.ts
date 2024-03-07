@@ -79,6 +79,11 @@ export class UserService {
 		const user = {
 			email: dto.email,
 			name: '',
+			surname: '',
+			middlename: '',
+			department: '',
+			position: '',
+			role: '',
 			password: await hash(dto.password)
 		}
 

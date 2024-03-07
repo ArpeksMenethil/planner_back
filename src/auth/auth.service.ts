@@ -94,16 +94,14 @@ export class AuthService {
 		const expiresIn = new Date()
 		expiresIn.setDate(expiresIn.getDate() + this.EXPIRE_DAY_REFRESH_TOKEN)
 
-		// console.log(this.configService.get('SERVER_DOMAIN'), expiresIn)
-
-		console.log(res.cookie(this.REFRESH_TOKEN_NAME, refreshToken, {
+		res.cookie(this.REFRESH_TOKEN_NAME, refreshToken, {
 			httpOnly: true,
 			domain: this.configService.get('SERVER_DOMAIN'),
 			expires: expiresIn,
 			secure: true,
 			// lax if production, none if dev
 			sameSite: 'lax'
-		}))
+		})
 	}
 
 	removeRefreshTokenFromResponse(res: Response) {

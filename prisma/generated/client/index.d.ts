@@ -1106,8 +1106,13 @@ export namespace Prisma {
     createdAt: Date | null
     updatedAt: Date | null
     email: string | null
-    name: string | null
     password: string | null
+    name: string | null
+    surname: string | null
+    middlename: string | null
+    department: string | null
+    position: string | null
+    role: string | null
   }
 
   export type UserMaxAggregateOutputType = {
@@ -1115,8 +1120,13 @@ export namespace Prisma {
     createdAt: Date | null
     updatedAt: Date | null
     email: string | null
-    name: string | null
     password: string | null
+    name: string | null
+    surname: string | null
+    middlename: string | null
+    department: string | null
+    position: string | null
+    role: string | null
   }
 
   export type UserCountAggregateOutputType = {
@@ -1124,8 +1134,13 @@ export namespace Prisma {
     createdAt: number
     updatedAt: number
     email: number
-    name: number
     password: number
+    name: number
+    surname: number
+    middlename: number
+    department: number
+    position: number
+    role: number
     _all: number
   }
 
@@ -1135,8 +1150,13 @@ export namespace Prisma {
     createdAt?: true
     updatedAt?: true
     email?: true
-    name?: true
     password?: true
+    name?: true
+    surname?: true
+    middlename?: true
+    department?: true
+    position?: true
+    role?: true
   }
 
   export type UserMaxAggregateInputType = {
@@ -1144,8 +1164,13 @@ export namespace Prisma {
     createdAt?: true
     updatedAt?: true
     email?: true
-    name?: true
     password?: true
+    name?: true
+    surname?: true
+    middlename?: true
+    department?: true
+    position?: true
+    role?: true
   }
 
   export type UserCountAggregateInputType = {
@@ -1153,8 +1178,13 @@ export namespace Prisma {
     createdAt?: true
     updatedAt?: true
     email?: true
-    name?: true
     password?: true
+    name?: true
+    surname?: true
+    middlename?: true
+    department?: true
+    position?: true
+    role?: true
     _all?: true
   }
 
@@ -1235,8 +1265,13 @@ export namespace Prisma {
     createdAt: Date
     updatedAt: Date
     email: string
-    name: string | null
     password: string
+    name: string | null
+    surname: string | null
+    middlename: string | null
+    department: string
+    position: string
+    role: string | null
     _count: UserCountAggregateOutputType | null
     _min: UserMinAggregateOutputType | null
     _max: UserMaxAggregateOutputType | null
@@ -1261,8 +1296,13 @@ export namespace Prisma {
     createdAt?: boolean
     updatedAt?: boolean
     email?: boolean
-    name?: boolean
     password?: boolean
+    name?: boolean
+    surname?: boolean
+    middlename?: boolean
+    department?: boolean
+    position?: boolean
+    role?: boolean
     tasks?: boolean | User$tasksArgs<ExtArgs>
     timeBlocks?: boolean | User$timeBlocksArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
@@ -1273,8 +1313,13 @@ export namespace Prisma {
     createdAt?: boolean
     updatedAt?: boolean
     email?: boolean
-    name?: boolean
     password?: boolean
+    name?: boolean
+    surname?: boolean
+    middlename?: boolean
+    department?: boolean
+    position?: boolean
+    role?: boolean
   }
 
   export type UserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -1295,8 +1340,13 @@ export namespace Prisma {
       createdAt: Date
       updatedAt: Date
       email: string
-      name: string | null
       password: string
+      name: string | null
+      surname: string | null
+      middlename: string | null
+      department: string
+      position: string
+      role: string | null
     }, ExtArgs["result"]["user"]>
     composites: {}
   }
@@ -1698,8 +1748,13 @@ export namespace Prisma {
     readonly createdAt: FieldRef<"User", 'DateTime'>
     readonly updatedAt: FieldRef<"User", 'DateTime'>
     readonly email: FieldRef<"User", 'String'>
-    readonly name: FieldRef<"User", 'String'>
     readonly password: FieldRef<"User", 'String'>
+    readonly name: FieldRef<"User", 'String'>
+    readonly surname: FieldRef<"User", 'String'>
+    readonly middlename: FieldRef<"User", 'String'>
+    readonly department: FieldRef<"User", 'String'>
+    readonly position: FieldRef<"User", 'String'>
+    readonly role: FieldRef<"User", 'String'>
   }
     
 
@@ -4017,8 +4072,13 @@ export namespace Prisma {
     createdAt: 'createdAt',
     updatedAt: 'updatedAt',
     email: 'email',
+    password: 'password',
     name: 'name',
-    password: 'password'
+    surname: 'surname',
+    middlename: 'middlename',
+    department: 'department',
+    position: 'position',
+    role: 'role'
   };
 
   export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
@@ -4168,8 +4228,13 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"User"> | Date | string
     updatedAt?: DateTimeFilter<"User"> | Date | string
     email?: StringFilter<"User"> | string
-    name?: StringNullableFilter<"User"> | string | null
     password?: StringFilter<"User"> | string
+    name?: StringNullableFilter<"User"> | string | null
+    surname?: StringNullableFilter<"User"> | string | null
+    middlename?: StringNullableFilter<"User"> | string | null
+    department?: StringFilter<"User"> | string
+    position?: StringFilter<"User"> | string
+    role?: StringNullableFilter<"User"> | string | null
     tasks?: TaskListRelationFilter
     timeBlocks?: TimeBlockListRelationFilter
   }
@@ -4179,8 +4244,13 @@ export namespace Prisma {
     createdAt?: SortOrder
     updatedAt?: SortOrder
     email?: SortOrder
-    name?: SortOrderInput | SortOrder
     password?: SortOrder
+    name?: SortOrderInput | SortOrder
+    surname?: SortOrderInput | SortOrder
+    middlename?: SortOrderInput | SortOrder
+    department?: SortOrder
+    position?: SortOrder
+    role?: SortOrderInput | SortOrder
     tasks?: TaskOrderByRelationAggregateInput
     timeBlocks?: TimeBlockOrderByRelationAggregateInput
   }
@@ -4193,8 +4263,13 @@ export namespace Prisma {
     NOT?: UserWhereInput | UserWhereInput[]
     createdAt?: DateTimeFilter<"User"> | Date | string
     updatedAt?: DateTimeFilter<"User"> | Date | string
-    name?: StringNullableFilter<"User"> | string | null
     password?: StringFilter<"User"> | string
+    name?: StringNullableFilter<"User"> | string | null
+    surname?: StringNullableFilter<"User"> | string | null
+    middlename?: StringNullableFilter<"User"> | string | null
+    department?: StringFilter<"User"> | string
+    position?: StringFilter<"User"> | string
+    role?: StringNullableFilter<"User"> | string | null
     tasks?: TaskListRelationFilter
     timeBlocks?: TimeBlockListRelationFilter
   }, "id" | "email">
@@ -4204,8 +4279,13 @@ export namespace Prisma {
     createdAt?: SortOrder
     updatedAt?: SortOrder
     email?: SortOrder
-    name?: SortOrderInput | SortOrder
     password?: SortOrder
+    name?: SortOrderInput | SortOrder
+    surname?: SortOrderInput | SortOrder
+    middlename?: SortOrderInput | SortOrder
+    department?: SortOrder
+    position?: SortOrder
+    role?: SortOrderInput | SortOrder
     _count?: UserCountOrderByAggregateInput
     _max?: UserMaxOrderByAggregateInput
     _min?: UserMinOrderByAggregateInput
@@ -4219,8 +4299,13 @@ export namespace Prisma {
     createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
     email?: StringWithAggregatesFilter<"User"> | string
-    name?: StringNullableWithAggregatesFilter<"User"> | string | null
     password?: StringWithAggregatesFilter<"User"> | string
+    name?: StringNullableWithAggregatesFilter<"User"> | string | null
+    surname?: StringNullableWithAggregatesFilter<"User"> | string | null
+    middlename?: StringNullableWithAggregatesFilter<"User"> | string | null
+    department?: StringWithAggregatesFilter<"User"> | string
+    position?: StringWithAggregatesFilter<"User"> | string
+    role?: StringNullableWithAggregatesFilter<"User"> | string | null
   }
 
   export type TaskWhereInput = {
@@ -4365,8 +4450,13 @@ export namespace Prisma {
     createdAt?: Date | string
     updatedAt?: Date | string
     email: string
-    name?: string | null
     password: string
+    name?: string | null
+    surname?: string | null
+    middlename?: string | null
+    department: string
+    position: string
+    role?: string | null
     tasks?: TaskCreateNestedManyWithoutUserInput
     timeBlocks?: TimeBlockCreateNestedManyWithoutUserInput
   }
@@ -4376,8 +4466,13 @@ export namespace Prisma {
     createdAt?: Date | string
     updatedAt?: Date | string
     email: string
-    name?: string | null
     password: string
+    name?: string | null
+    surname?: string | null
+    middlename?: string | null
+    department: string
+    position: string
+    role?: string | null
     tasks?: TaskUncheckedCreateNestedManyWithoutUserInput
     timeBlocks?: TimeBlockUncheckedCreateNestedManyWithoutUserInput
   }
@@ -4387,8 +4482,13 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     email?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    surname?: NullableStringFieldUpdateOperationsInput | string | null
+    middlename?: NullableStringFieldUpdateOperationsInput | string | null
+    department?: StringFieldUpdateOperationsInput | string
+    position?: StringFieldUpdateOperationsInput | string
+    role?: NullableStringFieldUpdateOperationsInput | string | null
     tasks?: TaskUpdateManyWithoutUserNestedInput
     timeBlocks?: TimeBlockUpdateManyWithoutUserNestedInput
   }
@@ -4398,8 +4498,13 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     email?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    surname?: NullableStringFieldUpdateOperationsInput | string | null
+    middlename?: NullableStringFieldUpdateOperationsInput | string | null
+    department?: StringFieldUpdateOperationsInput | string
+    position?: StringFieldUpdateOperationsInput | string
+    role?: NullableStringFieldUpdateOperationsInput | string | null
     tasks?: TaskUncheckedUpdateManyWithoutUserNestedInput
     timeBlocks?: TimeBlockUncheckedUpdateManyWithoutUserNestedInput
   }
@@ -4409,8 +4514,13 @@ export namespace Prisma {
     createdAt?: Date | string
     updatedAt?: Date | string
     email: string
-    name?: string | null
     password: string
+    name?: string | null
+    surname?: string | null
+    middlename?: string | null
+    department: string
+    position: string
+    role?: string | null
   }
 
   export type UserUpdateManyMutationInput = {
@@ -4418,8 +4528,13 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     email?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    surname?: NullableStringFieldUpdateOperationsInput | string | null
+    middlename?: NullableStringFieldUpdateOperationsInput | string | null
+    department?: StringFieldUpdateOperationsInput | string
+    position?: StringFieldUpdateOperationsInput | string
+    role?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type UserUncheckedUpdateManyInput = {
@@ -4427,8 +4542,13 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     email?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    surname?: NullableStringFieldUpdateOperationsInput | string | null
+    middlename?: NullableStringFieldUpdateOperationsInput | string | null
+    department?: StringFieldUpdateOperationsInput | string
+    position?: StringFieldUpdateOperationsInput | string
+    role?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type TaskCreateInput = {
@@ -4647,8 +4767,13 @@ export namespace Prisma {
     createdAt?: SortOrder
     updatedAt?: SortOrder
     email?: SortOrder
-    name?: SortOrder
     password?: SortOrder
+    name?: SortOrder
+    surname?: SortOrder
+    middlename?: SortOrder
+    department?: SortOrder
+    position?: SortOrder
+    role?: SortOrder
   }
 
   export type UserMaxOrderByAggregateInput = {
@@ -4656,8 +4781,13 @@ export namespace Prisma {
     createdAt?: SortOrder
     updatedAt?: SortOrder
     email?: SortOrder
-    name?: SortOrder
     password?: SortOrder
+    name?: SortOrder
+    surname?: SortOrder
+    middlename?: SortOrder
+    department?: SortOrder
+    position?: SortOrder
+    role?: SortOrder
   }
 
   export type UserMinOrderByAggregateInput = {
@@ -4665,8 +4795,13 @@ export namespace Prisma {
     createdAt?: SortOrder
     updatedAt?: SortOrder
     email?: SortOrder
-    name?: SortOrder
     password?: SortOrder
+    name?: SortOrder
+    surname?: SortOrder
+    middlename?: SortOrder
+    department?: SortOrder
+    position?: SortOrder
+    role?: SortOrder
   }
 
   export type StringWithAggregatesFilter<$PrismaModel = never> = {
@@ -5282,8 +5417,13 @@ export namespace Prisma {
     createdAt?: Date | string
     updatedAt?: Date | string
     email: string
-    name?: string | null
     password: string
+    name?: string | null
+    surname?: string | null
+    middlename?: string | null
+    department: string
+    position: string
+    role?: string | null
     timeBlocks?: TimeBlockCreateNestedManyWithoutUserInput
   }
 
@@ -5292,8 +5432,13 @@ export namespace Prisma {
     createdAt?: Date | string
     updatedAt?: Date | string
     email: string
-    name?: string | null
     password: string
+    name?: string | null
+    surname?: string | null
+    middlename?: string | null
+    department: string
+    position: string
+    role?: string | null
     timeBlocks?: TimeBlockUncheckedCreateNestedManyWithoutUserInput
   }
 
@@ -5318,8 +5463,13 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     email?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    surname?: NullableStringFieldUpdateOperationsInput | string | null
+    middlename?: NullableStringFieldUpdateOperationsInput | string | null
+    department?: StringFieldUpdateOperationsInput | string
+    position?: StringFieldUpdateOperationsInput | string
+    role?: NullableStringFieldUpdateOperationsInput | string | null
     timeBlocks?: TimeBlockUpdateManyWithoutUserNestedInput
   }
 
@@ -5328,8 +5478,13 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     email?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    surname?: NullableStringFieldUpdateOperationsInput | string | null
+    middlename?: NullableStringFieldUpdateOperationsInput | string | null
+    department?: StringFieldUpdateOperationsInput | string
+    position?: StringFieldUpdateOperationsInput | string
+    role?: NullableStringFieldUpdateOperationsInput | string | null
     timeBlocks?: TimeBlockUncheckedUpdateManyWithoutUserNestedInput
   }
 
@@ -5338,8 +5493,13 @@ export namespace Prisma {
     createdAt?: Date | string
     updatedAt?: Date | string
     email: string
-    name?: string | null
     password: string
+    name?: string | null
+    surname?: string | null
+    middlename?: string | null
+    department: string
+    position: string
+    role?: string | null
     tasks?: TaskCreateNestedManyWithoutUserInput
   }
 
@@ -5348,8 +5508,13 @@ export namespace Prisma {
     createdAt?: Date | string
     updatedAt?: Date | string
     email: string
-    name?: string | null
     password: string
+    name?: string | null
+    surname?: string | null
+    middlename?: string | null
+    department: string
+    position: string
+    role?: string | null
     tasks?: TaskUncheckedCreateNestedManyWithoutUserInput
   }
 
@@ -5374,8 +5539,13 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     email?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    surname?: NullableStringFieldUpdateOperationsInput | string | null
+    middlename?: NullableStringFieldUpdateOperationsInput | string | null
+    department?: StringFieldUpdateOperationsInput | string
+    position?: StringFieldUpdateOperationsInput | string
+    role?: NullableStringFieldUpdateOperationsInput | string | null
     tasks?: TaskUpdateManyWithoutUserNestedInput
   }
 
@@ -5384,8 +5554,13 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     email?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    surname?: NullableStringFieldUpdateOperationsInput | string | null
+    middlename?: NullableStringFieldUpdateOperationsInput | string | null
+    department?: StringFieldUpdateOperationsInput | string
+    position?: StringFieldUpdateOperationsInput | string
+    role?: NullableStringFieldUpdateOperationsInput | string | null
     tasks?: TaskUncheckedUpdateManyWithoutUserNestedInput
   }
 
